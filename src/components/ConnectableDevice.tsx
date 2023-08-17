@@ -59,7 +59,7 @@ const ConnectableDevice: React.FC<any> = () => {
                 </div>
             </div>
         )}
-        { data && <p>Data: {data}</p> }
+        { data && <div><p>Data: {data}</p></div> }
         </>
     );
 
