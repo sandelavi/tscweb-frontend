@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DummyComponent from './components/Dummy';
+import ConnectableDevice from './components/ConnectableDevice';
 
 function App() {
+  const [number, setNumber] = useState<number>(0);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,8 @@ function App() {
         >
           Learn React
         </a>
+        <DummyComponent number={number} setNumber={setNumber}/>
+        <ConnectableDevice />
       </header>
     </div>
   );
