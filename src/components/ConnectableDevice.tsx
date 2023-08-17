@@ -23,13 +23,25 @@ const ConnectableDevice: React.FC<any> = () => {
     return (
         <>
         { device ? (
-            <button type="button" onClick={disconnect}>
-                DISCONNECT DEVICE
-            </button>
+            <div>
+                <button type="button" onClick={disconnect}>
+                    DISCONNECT DEVICE
+                </button>
+                <div>
+                    <p>VendorId: { device.vendorId }</p>
+                    <p>ProductName: { device.productName }</p>
+                </div>
+            </div>
         ): (
+            <div>
             <button type="button" onClick={connect}>
                 CONNECT DEVICE
             </button>
+            <div>
+                <p>VendorId: </p>
+                <p>ProductName: </p>
+            </div>
+            </div>
         )}
         </>
     );
